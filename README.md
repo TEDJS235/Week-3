@@ -83,5 +83,3 @@ The research focuses on:
 > **Link to GitHub Repository**: [Insert URL Here]
 
 ---
-
-# Week-3
