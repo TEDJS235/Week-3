@@ -1,4 +1,4 @@
-# Literature Review: Concurrency in Functional and Imperative Programming
+# Week 3: Concurrency in Programming Languages
 
 **Author**: James Shan  
 **Course**: Programming Languages (CPSC-354)  
@@ -13,73 +13,81 @@
 4. [Key Findings](#key-findings)
 5. [Historical Developments](#historical-developments)
 6. [Advantages and Disadvantages](#advantages-and-disadvantages)
-7. [References](#references)
+7. [Discord Summary](#discord-summary)
+8. [References](#references)
 
 ---
 
 ## Introduction
 
-This literature review explores the question:  
-**"How do functional and imperative programming languages address concurrency, and what significant historical developments influenced their evolution?"**
+In Week 3, I explored how **functional** and **imperative** programming paradigms address concurrency. This week emphasized the advantages, challenges, and historical context of concurrent programming, essential for building modern scalable systems.
 
 ---
 
 ## Research Question
 
-The research focuses on:  
 > **How do functional and imperative programming languages address concurrency, and what significant historical developments influenced their evolution?**
 
 ---
 
 ## Exploration with LLM
 
-### Question 1: What are the fundamental differences between functional and imperative approaches to concurrency?  
-- Functional programming avoids shared state by leveraging **immutability** and concepts like **message passing**.  
-- Imperative programming relies on threads, locks, and shared memory, which are error-prone but efficient for systems-level programming.
+### Functional vs Imperative Approaches to Concurrency
 
-### Question 2: What historical milestones shaped the development of concurrency?  
-- **1960s**: Thread-based systems in **C** and **Unix**.  
-- **1973**: Actor Model by **Carl Hewitt**.  
-- **1980s**: Erlang’s message-passing model.  
-- **1990s–2010s**: Java threads, Haskell STM, and Akka frameworks.
+- **Functional Programming**:
+  - Avoids shared mutable state by emphasizing **immutability**.
+  - Uses high-level abstractions such as **message passing** and **STM**.
+  - Examples: Erlang’s Actor Model, Haskell's STM.
 
-### Question 3: Advantages and Disadvantages  
-| Approach              | Advantages                                    | Disadvantages                              |
-|-----------------------|-----------------------------------------------|-------------------------------------------|
-| **Functional**        | Easier to debug; immutability ensures safety. | New paradigms for developers; overhead.   |
-| **Imperative**        | Familiar and efficient.                      | Error-prone and complex debugging.        |
+- **Imperative Programming**:
+  - Relies on **threads**, **locks**, and shared memory.
+  - Provides performance benefits but introduces challenges like race conditions.
 
 ---
 
 ## Key Findings
 
-1. Functional approaches prioritize safety and simplicity using immutable state.  
-2. Imperative approaches emphasize performance but introduce complexity through shared state.  
+1. Functional programming simplifies concurrency but may introduce performance overhead.
+2. Imperative programming offers fine-grained control at the cost of complexity and debugging overhead.
 
 ---
 
 ## Historical Developments
 
-- **Actor Model** (Carl Hewitt, 1973).  
-- **Java Threads** and concurrency primitives.  
-- **STM** in Haskell and lightweight threads in **Go**.  
+- **Actor Model** (1973): Carl Hewitt introduced message-passing systems.
+- **Java Threads**: Introduced primitive concurrency mechanisms in the 1990s.
+- **Go’s Goroutines**: Lightweight concurrency primitives improve scalability.
+- **Akka Framework**: Scala-based Actor Model framework for distributed systems.
 
 ---
 
-## References
+## Advantages and Disadvantages
 
-1. Carl Hewitt, “The Actor Model” (1973).  
-2. Go’s Goroutines: [https://golang.org/](https://golang.org/)  
-3. Akka Framework for Scala: [https://akka.io/](https://akka.io/)  
+| **Approach**        | **Advantages**                                 | **Disadvantages**                            |
+|----------------------|-----------------------------------------------|---------------------------------------------|
+| Functional           | Simpler concurrency, fewer bugs.             | Performance overhead, requires paradigm shift. |
+| Imperative           | High performance, low-level control.         | Error-prone, debugging complexity.          |
+
+---
+
+## Discord Summary  
+
+In **Week 3**, I explored concurrency in functional and imperative programming languages. Functional programming emphasizes **immutability** and high-level abstractions like **message passing**, making concurrency safer and less error-prone. Imperative programming uses **threads** and **locks**, which offer performance but require careful handling to avoid race conditions and deadlocks. Historical developments such as the **Actor Model (1973)**, **Java threads (1990s)**, and **Go’s Goroutines** have shaped modern concurrent programming.
+
+**Interesting Question**:  
+What are the major trade-offs between lightweight threads (e.g., Go's Goroutines) and heavy threads in traditional imperative languages?
 
 ---
 
-## Discord Summary
+## References  
 
-> **Summary**: In Week 3, I explored how functional and imperative programming languages address concurrency. Functional programming uses immutability and message-passing systems like the Actor Model to simplify concurrency, while imperative programming relies on threads and locks. Historical milestones include the Actor Model (1973), Java threads (1990s), and STM frameworks (2000s).  
->  
-> **Question**: *What are the major trade-offs between lightweight threads (e.g., Go's Goroutines) and heavy threads in traditional imperative languages?*  
->  
-> **Link to GitHub Repository**: [https://github.com/TEDJS235/Week-3/tree/main]
+1. Actor Model: Carl Hewitt (1973).  
+2. Go Documentation: [https://golang.org](https://golang.org).  
+3. Akka Framework: [https://akka.io](https://akka.io).  
+4. Programming Languages: Lecture Notes and HackMD Guide.  
 
 ---
+
+## GitHub Repository
+
+[https://github.com/TEDJS235/Week-3](https://github.com/TEDJS235/Week-3)
