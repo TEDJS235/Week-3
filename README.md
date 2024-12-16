@@ -80,6 +80,6 @@ The research focuses on:
 >  
 > **Question**: *What are the major trade-offs between lightweight threads (e.g., Go's Goroutines) and heavy threads in traditional imperative languages?*  
 >  
-> **Link to GitHub Repository**: [Insert URL Here]
+> **Link to GitHub Repository**: [https://github.com/TEDJS235/Week-3/tree/main]
 
 ---
