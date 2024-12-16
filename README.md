@@ -87,18 +87,13 @@ This week’s exploration reinforced the importance of choosing the appropriate 
 
 ## Discord Summary  
 
-In **Week 3**, I explored the topic of concurrency in programming languages, focusing on the contrast between functional and imperative approaches. Functional programming handles concurrency using **immutability**, **pure functions**, and abstractions like **message passing** (e.g., Actor Model) and **software transactional memory (STM)**. These features make concurrent programming safer by avoiding shared mutable state. For instance, languages like **Erlang** and **Haskell** rely heavily on these principles to ensure error-free and scalable concurrent execution.
+In **Week 3**, I explored the topic of concurrency in programming languages, focusing on the contrast between functional and imperative approaches. Functional programming manages concurrency by emphasizing **immutability**, **pure functions**, and abstractions like **message passing** (e.g., the Actor Model) and **software transactional memory (STM)**. These features avoid shared mutable state, reducing common issues like race conditions and deadlocks. Languages like **Erlang** and **Haskell** exemplify this paradigm, providing tools that make concurrent programming safer, more predictable, and scalable.  
 
-Imperative programming, in contrast, provides low-level control over concurrency using **threads**, **locks**, and shared memory. While this model is more flexible and performant, it introduces significant challenges, such as race conditions, deadlocks, and increased debugging complexity.
+Imperative programming, on the other hand, relies on low-level constructs such as **threads**, **locks**, and shared memory to manage concurrency. While these approaches are powerful and offer high performance, they come with trade-offs, such as the risk of **thread interference**, **deadlocks**, and greater debugging complexity. Developers must manually handle synchronization, which increases overhead and potential for errors.  
 
-Historically, milestones like the **Actor Model (1973)** laid the foundation for functional message-passing systems, while **Go's Goroutines** and **Akka Framework** (Scala) further enhanced concurrent programming. These innovations address scalability and reliability challenges in modern systems.
+Historically, the **Actor Model (1973)** by Carl Hewitt laid the foundation for functional concurrency models by introducing message passing. Later advancements like **Go’s Goroutines** and **Scala’s Akka Framework** built on these ideas to offer scalable and lightweight concurrency primitives. Goroutines, in particular, enable massive parallelism with minimal memory overhead, making them ideal for cloud-scale applications.  
 
-This week, I also explored lightweight threads versus traditional threads and the trade-offs involved. Lightweight threads like Go's Goroutines offer efficient scheduling and minimal overhead, making them suitable for modern cloud-scale applications.
-
----
-
-**Interesting Question**:  
-What are the major trade-offs between lightweight threads (e.g., Go's Goroutines) and heavy threads in traditional imperative languages?
+This week, I reflected on the trade-offs between lightweight threads (e.g., Goroutines) and traditional heavyweight threads. Lightweight threads allow for efficient concurrency scheduling, but may introduce challenges when interfacing with shared state or blocking calls. Comparing the two models highlights the balance between performance, scalability, and ease of programming.
 
 ---
 
