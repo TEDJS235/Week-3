@@ -87,7 +87,15 @@ This week’s exploration reinforced the importance of choosing the appropriate 
 
 ## Discord Summary  
 
-In **Week 3**, I explored concurrency in functional and imperative programming languages. Functional programming emphasizes **immutability** and high-level abstractions like **message passing**, making concurrency safer and less error-prone. Imperative programming uses **threads** and **locks**, which offer performance but require careful handling to avoid race conditions and deadlocks. Historical developments such as the **Actor Model (1973)**, **Java threads (1990s)**, and **Go’s Goroutines** have shaped modern concurrent programming.
+In **Week 3**, I explored the topic of concurrency in programming languages, focusing on the contrast between functional and imperative approaches. Functional programming handles concurrency using **immutability**, **pure functions**, and abstractions like **message passing** (e.g., Actor Model) and **software transactional memory (STM)**. These features make concurrent programming safer by avoiding shared mutable state. For instance, languages like **Erlang** and **Haskell** rely heavily on these principles to ensure error-free and scalable concurrent execution.
+
+Imperative programming, in contrast, provides low-level control over concurrency using **threads**, **locks**, and shared memory. While this model is more flexible and performant, it introduces significant challenges, such as race conditions, deadlocks, and increased debugging complexity.
+
+Historically, milestones like the **Actor Model (1973)** laid the foundation for functional message-passing systems, while **Go's Goroutines** and **Akka Framework** (Scala) further enhanced concurrent programming. These innovations address scalability and reliability challenges in modern systems.
+
+This week, I also explored lightweight threads versus traditional threads and the trade-offs involved. Lightweight threads like Go's Goroutines offer efficient scheduling and minimal overhead, making them suitable for modern cloud-scale applications.
+
+---
 
 **Interesting Question**:  
 What are the major trade-offs between lightweight threads (e.g., Go's Goroutines) and heavy threads in traditional imperative languages?
